@@ -26,4 +26,20 @@ describe("when accessing the relative URL 'computers/new'", () => {
             });
         });
     });
+
+    describe("alternate paths", () => {
+        describe("when submitting the form without providing a computer name", () => {
+            it("displays the 'Computer name' field in red (meaning error)", () => {
+                const emptyComputerData = {
+                    computerName: "",
+                    introducedDate: "",
+                    discontinuedDate: ""
+                };
+
+                createComputersPage.form.fillWithProvidedDataAndSubmit(emptyComputerData);
+
+                helper.waitForElementVisibility(createComputersPage.form.fields.error);
+            });
+        });
+    });
 });
