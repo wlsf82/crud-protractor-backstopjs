@@ -25,8 +25,13 @@ The test cases from 'Assignment description - 1' are described here.
 
 > In all test scenarios the relative URLs have to be concatenated with the following base URL: http://computer-database.herokuapp.com/
 
-### When accessing the relative URL 'computers/new'
+> Remember to delete all browser's cookies and clear any session or local storage before each test!
+
+### Test suite: when accessing the relative URL 'computers/new'
 - it shows an h1 element with text equal to 'Add a computer'
+#### happy path
+- when providing a random computer name, valid introduced and discontinued dates, and clicking submit
+  - it displays a warning message confirming the computer's successfully creation
 
 ## Automated tests
 
@@ -42,19 +47,27 @@ Run `npm test` to run the automated tests
 
 If everything ran well you should see a test result like this:
 ```
-[19:47:41] I/launcher - Running 1 instances of WebDriver
-[19:47:41] I/local - Starting selenium standalone server...
-[19:47:42] I/local - Selenium standalone server started at http://192.168.0.15:55545/wd/hub
+[21:58:58] I/launcher - Running 1 instances of WebDriver
+[21:58:58] I/local - Starting selenium standalone server...
+[21:58:59] I/local - Selenium standalone server started at http://192.168.0.15:59940/wd/hub
 Started
 Jasmine started
 .
-  When accessing the relative URL 'computers/new'
+  when accessing the relative URL 'computers/new'
     ✓ shows an h1 element with text equal to 'Add a computer'
+.
+    happy path
 
-1 spec, 0 failures
-Finished in 0.942 seconds
+      when providing a random computer name, valid introduced and discontinued dates, and clicking submit
+        ✓ displays a warning message confirming the computer's successfully creation
 
-Executed 1 of 1 spec SUCCESS in 0.942 sec.
+
+
+
+2 specs, 0 failures
+Finished in 2.499 seconds
+
+Executed 2 of 2 specs SUCCESS in 2 secs.
 ```
 
 >In case of test failures a HTML report with screenshots of the browser in the moment of the failure can be found at the `test-report` directory.
