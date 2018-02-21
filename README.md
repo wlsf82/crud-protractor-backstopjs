@@ -32,6 +32,9 @@ The test cases from 'Assignment description - 1' are described here.
 #### happy path
 - when providing a random computer name, valid introduced and discontinued dates, and clicking submit
   - it displays a warning message confirming the computer's successfully creation
+#### alternate paths
+- when submitting the form without providing a computer name
+  - it displays the 'Computer name' field in red (meaning error)
 
 ## Automated tests
 
@@ -47,9 +50,9 @@ Run `npm test` to run the automated tests
 
 If everything ran well you should see a test result like this:
 ```
-[21:58:58] I/launcher - Running 1 instances of WebDriver
-[21:58:58] I/local - Starting selenium standalone server...
-[21:58:59] I/local - Selenium standalone server started at http://192.168.0.15:59940/wd/hub
+[22:50:15] I/launcher - Running 1 instances of WebDriver
+[22:50:15] I/local - Starting selenium standalone server...
+[22:50:16] I/local - Selenium standalone server started at http://192.168.0.15:63206/wd/hub
 Started
 Jasmine started
 .
@@ -58,16 +61,29 @@ Jasmine started
 .
     happy path
 
-      when providing a random computer name, valid introduced and discontinued dates, and clicking submit
+      when providing valid data and clicking submit
         ✓ displays a warning message confirming the computer's successfully creation
 
+.    alternate paths
+
+      when submitting the form without providing a computer name
+        ✓ displays the 'Computer name' field in red (meaning error)
 
 
 
-2 specs, 0 failures
-Finished in 2.499 seconds
 
-Executed 2 of 2 specs SUCCESS in 2 secs.
+3 specs, 0 failures
+Finished in 3.763 seconds
+
+Executed 3 of 3 specs SUCCESS in 4 secs.
+
+
+
+
+
+[22:50:22] I/local - Shutting down selenium standalone server.
+[22:50:22] I/launcher - 0 instance(s) of WebDriver still running
+[22:50:22] I/launcher - chrome #01 passed
 ```
 
 >In case of test failures a HTML report with screenshots of the browser in the moment of the failure can be found at the `test-report` directory.
