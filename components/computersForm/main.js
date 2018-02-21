@@ -24,6 +24,13 @@ class ComputersForm {
         helper.clickWhenClickable(this.buttons.createThisComputer);
         return successMessage;
     }
+
+    fillWithProvidedDataAndSubmit(data) {
+        helper.fillFieldWithTextWhenVisible(this.fields.computerName, data.computerName);
+        helper.fillFieldWithTextWhenVisible(this.fields.introducedDate, data.introducedDate);
+        helper.fillFieldWithTextWhenVisible(this.fields.discontinuedDate, data.discontinuedDate);
+        helper.clickWhenClickable(this.buttons.createThisComputer);
+    }
 }
 
 module.exports = ComputersForm;
