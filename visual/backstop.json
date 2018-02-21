@@ -16,6 +16,15 @@
       "readySelector": "form[action='/computers']",
       "misMatchThreshold" : 0.1,
       "requireSameDimensions": true
+    },
+    {
+      "label": "Backbase assignment - create computer page - computer name is required",
+      "url": "http://computer-database.herokuapp.com/computers/new",
+      "readySelector": "form[action='/computers'] .actions input[type='submit']",
+      "clickSelector": "form[action='/computers'] .actions input[type='submit']",
+      "postInteractionWait": "form[action='/computers'] fieldset .error",
+      "misMatchThreshold" : 0.1,
+      "requireSameDimensions": true
     }
   ],
   "paths": {
