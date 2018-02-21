@@ -18,11 +18,28 @@
       "requireSameDimensions": true
     },
     {
+      "label": "Backbase assignment - successfully create a computer",
+      "onReadyScript": "chromy/onReadyFillComputerNameAndSubmit.js",
+      "url": "http://computer-database.herokuapp.com/computers/new",
+      "readySelector": "form[action='/computers']",
+      "hideSelectors": ["#main h1"],
+      "misMatchThreshold" : 0.1,
+      "requireSameDimensions": true
+    },
+    {
       "label": "Backbase assignment - create computer page - computer name is required",
       "url": "http://computer-database.herokuapp.com/computers/new",
       "readySelector": "form[action='/computers'] .actions input[type='submit']",
       "clickSelector": "form[action='/computers'] .actions input[type='submit']",
       "postInteractionWait": "form[action='/computers'] fieldset .error",
+      "misMatchThreshold" : 0.1,
+      "requireSameDimensions": true
+    },
+    {
+      "label": "Backbase assignment - invalid introduced and discontinued dates",
+      "onReadyScript": "chromy/onReadyFillComputerNameButInvalidDatesAndSubmit.js",
+      "url": "http://computer-database.herokuapp.com/computers/new",
+      "readySelector": "form[action='/computers']",
       "misMatchThreshold" : 0.1,
       "requireSameDimensions": true
     }
