@@ -9,6 +9,7 @@
   "author": "Walmyr Filho <wlsf82@gmail.com> (http://walmyr-filho.com)",
   "license": "ISC",
   "devDependencies": {
+    "faker": "^4.1.0",
     "jasmine-spec-reporter": "^4.2.1",
     "protractor": "^5.3.0",
     "protractor-flake": "^3.0.2",
