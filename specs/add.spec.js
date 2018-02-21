@@ -1,4 +1,3 @@
-const faker = require("faker");
 const helper = require("protractor-helper");
 
 const CreateComputersPage = require("../page-objects/createComputers");
@@ -19,26 +18,9 @@ describe("when accessing the relative URL 'computers/new'", () => {
     });
 
     describe("happy path", () => {
-        describe("when providing a random computer name, valid introduced and discontinued dates, and clicking submit", () => {
+        describe("when providing valid data and clicking submit", () => {
             it("displays a warning message confirming the computer's successfully creation", () => {
-                const randomComputerName = faker.hacker.adjective();
-                const introducedDate = "2018-02-01";
-                const discontinuedDate = "2016-02-01";
-                const successMessage = `Done! Computer ${randomComputerName} has been created`;
-
-                helper.fillFieldWithTextWhenVisible(
-                    createComputersPage.form.fields.computerName,
-                    randomComputerName
-                );
-                helper.fillFieldWithTextWhenVisible(
-                    createComputersPage.form.fields.introducedDate,
-                    introducedDate
-                );
-                helper.fillFieldWithTextWhenVisible(
-                    createComputersPage.form.fields.discontinuedDate,
-                    discontinuedDate
-                );
-                helper.clickWhenClickable(createComputersPage.form.buttons.createThisComputer);
+                const successMessage = createComputersPage.form.fillWithValidDataAndSubmit();
 
                 helper.waitForTextToBePresentInElement(commonElements.warningMessage, successMessage);
             });
