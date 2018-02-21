@@ -1,0 +1,18 @@
+{
+  "name": "backbase-assignment",
+  "version": "1.0.0",
+  "description": "CRUD tests for backbase assignment",
+  "main": "index.js",
+  "scripts": {
+    "test": "rm -rf test-report && webdriver-manager update && protractor-flake --protractor-path=./node_modules/.bin/protractor -- protractor.conf.js"
+  },
+  "author": "Walmyr Filho <wlsf82@gmail.com> (http://walmyr-filho.com)",
+  "license": "ISC",
+  "devDependencies": {
+    "jasmine-spec-reporter": "^4.2.1",
+    "protractor": "^5.3.0",
+    "protractor-flake": "^3.0.2",
+    "protractor-helper": "^3.2.3",
+    "protractor-jasmine2-html-reporter": "0.0.7"
+  }
+}
