@@ -121,8 +121,8 @@
   "report": [],
   "engine": "chrome",
   "engineFlags": [],
-  "asyncCaptureLimit": 5,
-  "asyncCompareLimit": 50,
+  "asyncCaptureLimit": 1,
+  "asyncCompareLimit": 1,
   "debug": false,
   "debugWindow": false
 }
