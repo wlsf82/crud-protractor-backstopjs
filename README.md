@@ -141,3 +141,6 @@ Run `npm run test:visual` to run the visual regression tests
 Run `npm run test:visual:approve` to new bitmap references
 
 >After approving new bitmap references re-run the tests to check that they pass in the second run.
+___
+
+Note: all the test cases (manual and automated) are based on the application's behaviour in the following data: 22th of February, 2018.
