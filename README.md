@@ -40,6 +40,8 @@ The test cases from 'Assignment description - 1' are described here.
   - it displays the date fields in red (meaning error)
 - when clicking cancel
   - it goes back to the homepage
+- when clicking the header link
+  - it goes back to the homepage
 
 ### Test suite: when accessing the relative URL 'computers'
 - when clicking 'Next' in the pagination

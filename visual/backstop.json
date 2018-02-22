@@ -62,6 +62,20 @@
       "requireSameDimensions": true
     },
     {
+      "label": "Backbase assignment - go back to home page by clicking header link",
+      "url": "http://computer-database.herokuapp.com/computers/new",
+      "readySelector": "form[action='/computers']",
+      "clickSelector": "a[href='/']",
+      "hideSelectors": [
+          "#main h1",
+          ".computers.zebra-striped tbody",
+          "#pagination ul li:nth-child(2)"
+      ],
+      "postInteractionWait": ".computers.zebra-striped",
+      "misMatchThreshold" : 0.1,
+      "requireSameDimensions": true
+    },
+    {
       "label": "Backbase assignment - click next on pagination",
       "url": "http://computer-database.herokuapp.com/computers",
       "readySelector": "#pagination a[href='/computers?p=1']",
