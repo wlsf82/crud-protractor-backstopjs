@@ -42,6 +42,19 @@
       "readySelector": "form[action='/computers']",
       "misMatchThreshold" : 0.1,
       "requireSameDimensions": true
+    },
+    {
+      "label": "Backbase assignment - cancel product creation",
+      "url": "http://computer-database.herokuapp.com/computers/new",
+      "readySelector": "form[action='/computers'] .actions a[href='/computers']",
+      "clickSelector": "form[action='/computers'] .actions a[href='/computers']",
+      "hideSelectors": [
+          "#main h1",
+          ".computers.zebra-striped tbody"
+      ],
+      "postInteractionWait": ".computers.zebra-striped",
+      "misMatchThreshold" : 0.1,
+      "requireSameDimensions": true
     }
   ],
   "paths": {
