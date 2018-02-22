@@ -30,7 +30,7 @@ The test cases from 'Assignment description - 1' are described here.
 ### Test suite: when accessing the relative URL 'computers/new'
 - it shows an h1 element with text equal to 'Add a computer'
 #### happy path
-- when providing a random computer name, valid introduced and discontinued dates, and clicking submit
+- when providing valid data and clicking submit
   - it displays a warning message confirming the computer's successfully creation
 #### alternate paths
 - when submitting the form without providing a computer name
