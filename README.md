@@ -44,9 +44,11 @@ The test cases from 'Assignment description - 1' are described here.
 
 Run `npm i` to install the development dependencies
 
-### Running the tests
+### End-to-end tests with Protractor
 
-Run `npm test` to run the automated tests
+#### Running the tests
+
+Run `npm run test:e2e` to run the end-to-end tests
 
 If everything ran well you should see a test result like this:
 ```
@@ -87,3 +89,17 @@ Executed 3 of 3 specs SUCCESS in 4 secs.
 ```
 
 >In case of test failures a HTML report with screenshots of the browser in the moment of the failure can be found at the `test-report` directory.
+
+### Visual regression tests with BackstopJS tests
+
+#### Running the tests
+
+Run `npm run test:visual` to run the visual regression tests
+
+>After the test execution a report will be automatically opened.
+
+#### Approving new bitmap references due to expected visual change or addition of new test
+
+Run `npm run test:visual:approve` to new bitmap references
+
+>After approving new bitmap references re-run the tests to check that they pass in the second run.
