@@ -1,5 +1,7 @@
 # Backbase assignment
 
+This document describes the Backbase assignment for the role of QA engineer and then demonstrates a possible solution. By Walmyr Filho.
+
 ## Assignment description
 QA Testing case.
 We love to challenge our candidates, so we kindly ask that you complete the bellow assignment as part of your application for the QA Engineer position. The completed assignment is due by 26th of February, 2018.
@@ -103,6 +105,10 @@ Run `npm i` to install the development dependencies
 
 ### End-to-end tests with Protractor
 
+End-to-end tests simulate user's behaviours and check for expected results.
+
+Note: these sample of tests are only to exemplify a well structured test architecture using the Protractor framework.
+
 #### Running the tests
 
 Run `npm run test:e2e` to run the end-to-end tests
@@ -149,7 +155,9 @@ Executed 3 of 3 specs SUCCESS in 4 secs.
 
 ### Visual regression tests with BackstopJS
 
-Visual regression tests are executed in different viewports.
+Visual regression tests check not only the application behaviour, but also its visual aspect.
+
+Note: all test scenarios are executed in different viewports (desktop and mobile).
 
 #### Running the tests
 
@@ -157,7 +165,7 @@ Run `npm run test:visual` to run the visual regression tests
 
 >To have a HTML report automatically opened after test execution, set `"report": ["browser"]` on `visual/backstop.json` file.
 
-#### Approving new bitmap references due to expected visual change or addition of new test
+#### Approving new bitmap references due to expected visual changes or addition of new visual tests
 
 Run `npm run test:visual:approve` to approve new bitmap references
 
@@ -165,3 +173,5 @@ Run `npm run test:visual:approve` to approve new bitmap references
 ___
 
 Note: all the test cases (manual and automated) are based on the application's behaviour in the following date: 22nd of February, 2018.
+
+Note 2: Some tests were not automated due to a not controlled environment.
