@@ -42,6 +42,8 @@ The test cases from 'Assignment description - 1' are described here.
   - it goes back to the homepage
 - when clicking the header link
   - it goes back to the homepage
+- when filling the computer name with a long name submitting the form (exemple of long name: 'This is a computer with a loooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooong name')
+  - it displays a warning message confirming the computer's successfully creation
 
 ### Test suite: when accessing the relative URL 'computers'
 - when clicking 'Next' in the pagination
