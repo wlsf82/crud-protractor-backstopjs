@@ -74,7 +74,7 @@ Note: if there were limitations on the computer name and rules applied to the da
     - when clicking 'Next' the computers shown continue to match the filter
       - when clicking 'Previous' the computers shown continue to match the filter
 - when clicking a computer name link
-  - it shows in the form the same data displayed in the previous table
+  - it shows in the form the same data displayed in the previous table row of the clicked computer
 
 Note: if there were rules for for ordering computers by name, introduced date, discontinued date and company I'd create test cases for each of these columns in ascendent and descendent order.
 
