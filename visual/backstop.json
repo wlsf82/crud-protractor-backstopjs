@@ -60,6 +60,20 @@
       "postInteractionWait": ".computers.zebra-striped",
       "misMatchThreshold" : 0.1,
       "requireSameDimensions": true
+    },
+    {
+      "label": "Backbase assignment - click next on pagination",
+      "url": "http://computer-database.herokuapp.com/computers",
+      "readySelector": "#pagination a[href='/computers?p=1']",
+      "clickSelector": "#pagination a[href='/computers?p=1']",
+      "hideSelectors": [
+          "#main h1",
+          ".computers.zebra-striped tbody",
+          "#pagination ul li:nth-child(2)"
+      ],
+      "postInteractionWait": "#pagination a[href='/computers?p=2']",
+      "misMatchThreshold" : 0.1,
+      "requireSameDimensions": true
     }
   ],
   "paths": {
