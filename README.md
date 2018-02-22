@@ -99,6 +99,10 @@ There are two kind of automated tests in this project (Protractor end-to-end tes
 
 > Node.js and Chrome need to be installed to run the tests
 
+Note: The following versions of Node.js and NPM were used (`node v8.9.4`, `npm 5.6.0`)
+
+Note 2: The following version of Chrome was used: `64.0.3282.167`
+
 ### Installation
 
 Run `npm i` to install the development dependencies
