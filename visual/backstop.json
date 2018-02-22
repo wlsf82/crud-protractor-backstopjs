@@ -19,7 +19,7 @@
     },
     {
       "label": "Backbase assignment - successfully create a computer",
-      "onReadyScript": "chromy/onReadyFillComputerNameAndSubmit.js",
+      "onReadyScript": "chromy/custom/onReadyFillComputerNameAndSubmit.js",
       "url": "http://computer-database.herokuapp.com/computers/new",
       "readySelector": "form[action='/computers']",
       "hideSelectors": ["#main h1"],
@@ -37,7 +37,7 @@
     },
     {
       "label": "Backbase assignment - invalid introduced and discontinued dates",
-      "onReadyScript": "chromy/onReadyFillComputerNameButInvalidDatesAndSubmit.js",
+      "onReadyScript": "chromy/custom/onReadyFillComputerNameButInvalidDatesAndSubmit.js",
       "url": "http://computer-database.herokuapp.com/computers/new",
       "readySelector": "form[action='/computers']",
       "misMatchThreshold" : 0.1,
