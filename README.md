@@ -110,6 +110,10 @@ Note: The following versions of Node.js and NPM were used (`node v8.9.4`, `npm 5
 
 Note 2: The following version of Chrome was used: `64.0.3282.167`
 
+> Java and JDK need to be installed as well.
+
+Note: The following version of Java was used (java `1.8.0_73`)
+
 ### Installation
 
 Run `npm i` to install the development dependencies
