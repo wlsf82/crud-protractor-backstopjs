@@ -22,7 +22,11 @@
       "onReadyScript": "chromy/custom/onReadyFillComputerNameAndSubmit.js",
       "url": "http://computer-database.herokuapp.com/computers/new",
       "readySelector": "form[action='/computers']",
-      "hideSelectors": ["#main h1"],
+      "hideSelectors": [
+          "#main h1",
+          ".computers.zebra-striped tbody",
+          "#pagination ul li:nth-child(2)"
+      ],
       "misMatchThreshold" : 0.1,
       "requireSameDimensions": true
     },
@@ -50,7 +54,8 @@
       "clickSelector": "form[action='/computers'] .actions a[href='/computers']",
       "hideSelectors": [
           "#main h1",
-          ".computers.zebra-striped tbody"
+          ".computers.zebra-striped tbody",
+          "#pagination ul li:nth-child(2)"
       ],
       "postInteractionWait": ".computers.zebra-striped",
       "misMatchThreshold" : 0.1,
