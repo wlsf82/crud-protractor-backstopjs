@@ -47,6 +47,8 @@ The test cases from 'Assignment description - 1' are described here.
 
 ## Automated tests
 
+There are two kind of automated tests in this project (Protractor end-to-end tests and BackstopJS visual regression tests).
+
 > You need Node.js and Chrome installed to run the tests
 
 ### Installation
@@ -99,7 +101,7 @@ Executed 3 of 3 specs SUCCESS in 4 secs.
 
 >In case of test failures a HTML report with screenshots of the browser in the moment of the failure can be found at the `test-report` directory.
 
-### Visual regression tests with BackstopJS tests
+### Visual regression tests with BackstopJS
 
 #### Running the tests
 
