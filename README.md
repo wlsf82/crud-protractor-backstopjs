@@ -38,8 +38,12 @@ The manual test cases from 'Assignment description - 1' are described here.
 #### alternate paths
 - when submitting the form without providing a computer name
   - it displays the 'Computer name' field in red (meaning error)
-- when submitting the form providing a valid computer name but invalid dates (introduced and discontinued dates)
+- when submitting the form providing a valid computer name but invalid dates (introduced and discontinued dates with invalid mask - e.g.: '20000101')
   - it displays the date fields in red (meaning error)
+- when submitting the form providing valid computer and discontinued date but invalid introduced date (e.g.: '2000-02-30')
+  - it displays the introduced date field in red (meaning error)
+- when submitting the form providing valid computer and introduced date but invalid discontinued date (e.g.: '2000-04-31')
+  - it displays the discontinued date field in red (meaning error)
 - when clicking 'Cancel'
   - it goes back to the homepage
 - when clicking the header link
