@@ -45,8 +45,24 @@
       "requireSameDimensions": true
     },
     {
-      "label": "Backbase assignment - invalid introduced and discontinued dates",
-      "onReadyScript": "chromy/custom/onReadyFillComputerNameButInvalidDatesAndSubmit.js",
+      "label": "Backbase assignment - invalid introduced and discontinued dates (invalid date masks)",
+      "onReadyScript": "chromy/custom/onReadyFillComputerNameButInvalidDateMasksAndSubmit.js",
+      "url": "http://computer-database.herokuapp.com/computers/new",
+      "readySelector": "form[action='/computers']",
+      "misMatchThreshold" : 0.1,
+      "requireSameDimensions": true
+    },
+    {
+      "label": "Backbase assignment - invalid introduced date",
+      "onReadyScript": "chromy/custom/onReadyFillComputerNameButInvalidIntroducedDateAndSubmit.js",
+      "url": "http://computer-database.herokuapp.com/computers/new",
+      "readySelector": "form[action='/computers']",
+      "misMatchThreshold" : 0.1,
+      "requireSameDimensions": true
+    },
+    {
+      "label": "Backbase assignment - invalid discontinued date",
+      "onReadyScript": "chromy/custom/onReadyFillComputerNameButInvalidDiscontinuedDateAndSubmit.js",
       "url": "http://computer-database.herokuapp.com/computers/new",
       "readySelector": "form[action='/computers']",
       "misMatchThreshold" : 0.1,
