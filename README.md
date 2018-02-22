@@ -145,6 +145,8 @@ Executed 3 of 3 specs SUCCESS in 4 secs.
 
 ### Visual regression tests with BackstopJS
 
+Visual regression tests are executed in different viewports.
+
 #### Running the tests
 
 Run `npm run test:visual` to run the visual regression tests

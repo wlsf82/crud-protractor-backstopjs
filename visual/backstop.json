@@ -5,6 +5,11 @@
       "label": "desktop",
       "width": 1280,
       "height": 1024
+    },
+    {
+        "label": "mobile",
+        "width": 414,
+        "height": 736
     }
   ],
   "onBeforeScript": "chromy/onBefore.js",
