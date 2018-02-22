@@ -29,12 +29,21 @@ The test cases from 'Assignment description - 1' are described here.
 
 ### Test suite: when accessing the relative URL 'computers/new'
 - it shows an h1 element with text equal to 'Add a computer'
+- it shows a form to create a computer
 #### happy path
 - when providing valid data and clicking submit
   - it displays a warning message confirming the computer's successfully creation
 #### alternate paths
 - when submitting the form without providing a computer name
   - it displays the 'Computer name' field in red (meaning error)
+- when submitting the form providing a valid computer name but invalid dates(introduced and discontinued)
+  - it displays the date fields in red (meaning error)
+- when clicking cancel
+  - it goes back to the homepage
+
+### Test suite: when accessing the relative URL 'computers'
+- when clicking 'Next' in the pagination
+  - the 'Previous' button gets enabled in the pagination
 
 ## Automated tests
 
