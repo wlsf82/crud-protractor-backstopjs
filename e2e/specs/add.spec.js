@@ -26,7 +26,7 @@ describe("when accessing the relative URL 'computers/new'", () => {
                     introducedDate: "2018-02-01",
                     discontinuedDate: "2016-02-01"
                 };
-                const successMessage = `Done! Computer ${validDataForComputerCreation.computerName} has been created`
+                const successMessage = `Done! Computer ${validDataForComputerCreation.computerName} has been created`;
 
                 createComputersPage.form.fillWithProvidedDataAndSubmit(validDataForComputerCreation);
 
