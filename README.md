@@ -21,7 +21,9 @@ ___
 
 ## Manual test cases
 
-The test cases from 'Assignment description - 1' are described here.
+The manual test cases from 'Assignment description - 1' are described here.
+
+> Remember to access the page in test before each test case
 
 > In all test scenarios the relative URLs have to be concatenated with the following base URL: http://computer-database.herokuapp.com/
 
@@ -32,18 +34,23 @@ The test cases from 'Assignment description - 1' are described here.
 - it shows a form to create a computer
 #### happy path
 - when providing valid data and clicking submit
-  - it displays a warning message confirming the computer's successfully creation
+  - it displays a warning message confirming the computer's successfully creation, and when filtering by the newly created computer it should display the correct date in the table
 #### alternate paths
 - when submitting the form without providing a computer name
   - it displays the 'Computer name' field in red (meaning error)
-- when submitting the form providing a valid computer name but invalid dates(introduced and discontinued)
+- when submitting the form providing a valid computer name but invalid dates (introduced and discontinued dates)
   - it displays the date fields in red (meaning error)
 - when clicking 'Cancel'
   - it goes back to the homepage
 - when clicking the header link
   - it goes back to the homepage
-- when filling the computer name with a long name submitting the form (exemple of long name: 'This is a computer with a loooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooong name')
-  - it displays a warning message confirming the computer's successfully creation
+
+Note: if there were limitations on the computer name and rules applied to the date fields I'd create the following test cases as well:
+
+- when filling the computer name with a long name and submitting the form (exemple of long name: 'This is a computer with a loooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooong name')
+  - the computer name field should have a limit size not allowing such a long computer name
+- when filling a valid computer name, but an introduced date that is in the past when compared to the discontinued date and submitting the form
+  - it should not allow the introduced date to be less than the discontinued date. This field could be shown in red (meaning error)
 
 ### Test suite: when accessing the relative URL 'computers'
 - when clicking 'Next' in the pagination
@@ -58,13 +65,19 @@ The test cases from 'Assignment description - 1' are described here.
   - the table shows only the filtered computer and the pagination buttons get disabled
 - when filtering by a string that returns more than one value, but less than 10 values
   - the table shows computers that match with the filtered string and the pagination buttons get disabled
-- when filtering by a string that returns more than one value and more than 10 values
+- when filtering by a string that returns more than 10 values
   - the table shows computers that match with the filtered string and the 'Next' pagination button gets enabled
+    - when clicking 'Next' the computers shown continue to match the filter
+      - when clicking 'Previous' the computers shown continue to match the filter
+- when clicking a computer name link
+  - it shows in the form the same data displayed in the previous table
 
-### Test suite: when accessing the relative URL `computers/${computer-id}`
-- when editing the computer name and clicking 'Save this computer'
+Note: if there were rules for for ordering computers by name, introduced date, discontinued date and company I'd create test cases for each of these columns in ascendent and descendent order.
+
+### Test suite: when accessing the relative URL `computers/${computer-id}` (change '${computer-id}' to a valid computer id)
+- when editing the computer name with valid data and clicking 'Save this computer'
   - it shows a message saying  'Done! Computer [new computer name] has been updated'
-- when editing all information about a computer and clicking 'Save this computer'
+- when editing all information about a computer with valid data and clicking 'Save this computer'
   - when filtering by the just edited computer
     - the table shows only the filtered computer with all the new data
 - when editing the computer name to an empty value and clicking 'Save this computer'
@@ -78,7 +91,7 @@ The test cases from 'Assignment description - 1' are described here.
 
 There are two kind of automated tests in this project (Protractor end-to-end tests and BackstopJS visual regression tests).
 
-> You need Node.js and Chrome installed to run the tests
+> Node.js and Chrome need to be installed to run the tests
 
 ### Installation
 
@@ -136,13 +149,13 @@ Executed 3 of 3 specs SUCCESS in 4 secs.
 
 Run `npm run test:visual` to run the visual regression tests
 
->After the test execution a report will be automatically opened.
+>After the test execution a HTML report will be automatically opened.
 
 #### Approving new bitmap references due to expected visual change or addition of new test
 
-Run `npm run test:visual:approve` to new bitmap references
+Run `npm run test:visual:approve` to approve new bitmap references
 
->After approving new bitmap references re-run the tests to check that they pass in the second run.
+>After approving new bitmap references remember to re-run the tests to check that they pass in the second run.
 ___
 
-Note: all the test cases (manual and automated) are based on the application's behaviour in the following data: 22th of February, 2018.
+Note: all the test cases (manual and automated) are based on the application's behaviour in the following date: 22nd of February, 2018.
