@@ -38,14 +38,39 @@ The test cases from 'Assignment description - 1' are described here.
   - it displays the 'Computer name' field in red (meaning error)
 - when submitting the form providing a valid computer name but invalid dates(introduced and discontinued)
   - it displays the date fields in red (meaning error)
-- when clicking cancel
+- when clicking 'Cancel'
   - it goes back to the homepage
 - when clicking the header link
   - it goes back to the homepage
 
 ### Test suite: when accessing the relative URL 'computers'
 - when clicking 'Next' in the pagination
-  - the 'Previous' button gets enabled in the pagination
+  - the 'Previous' button gets enabled
+- when clicking 'Next' and 'Previous' in the pagination
+  - the 'Previous' button gets disabled
+- when searching for a non existing computer name
+  - it shows a 'Nothing to display' message
+- when clicking 'Next' in the pagination until the last page
+  - the 'Next' button gets disabled
+- when filtering by a specific computer name
+  - the table shows only the filtered computer and the pagination buttons get disabled
+- when filtering by a string that returns more than one value, but less than 10 values
+  - the table shows computers that match with the filtered string and the pagination buttons get disabled
+- when filtering by a string that returns more than one value and more than 10 values
+  - the table shows computers that match with the filtered string and the 'Next' pagination button gets enabled
+
+### Test suite: when accessing the relative URL `computers/${computer-id}`
+- when editing the computer name and clicking 'Save this computer'
+  - it shows a message saying  'Done! Computer [new computer name] has been updated'
+- when editing all information about a computer and clicking 'Save this computer'
+  - when filtering by the just edited computer
+    - the table shows only the filtered computer with all the new data
+- when editing the computer name to an empty value and clicking 'Save this computer'
+  - it displays the 'Computer name' field in red (meaning error)
+- when clicking 'Delete this computer'
+  - it shows a message saying 'Done! Computer has been deleted'
+- when clicking 'Cancel'
+  - it goes back to the homepage
 
 ## Automated tests
 
