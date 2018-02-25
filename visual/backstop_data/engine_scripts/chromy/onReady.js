@@ -1,3 +1,3 @@
 module.exports = function (chromy, scenario) {
-    require("./clickAndHoverHelper")(chromy, scenario);
+    require("./clickAndPostInteractionWaitHelper")(chromy, scenario);
 };
