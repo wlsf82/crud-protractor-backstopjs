@@ -6,7 +6,7 @@ By Walmyr Filho.
 
 ## Assignment description
 QA Testing case.
-We love to challenge our candidates, so we kindly ask that you complete the bellow assignment as part of your application for the QA Engineer position. The completed assignment is due by 26th of February, 2018.
+We love to challenge our candidates, so we kindly ask that you complete the bellow assignment as part of your application for the QA Engineer position. The completed assignment is due by 25th of February, 2018.
 
 ### 0 - Please access the following sample application
 
