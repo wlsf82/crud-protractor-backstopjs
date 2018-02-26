@@ -27,7 +27,7 @@ module.exports.config = ({
             fileName: "backbase-assignment-test-report",
             fixedScreenshotName: true,
             cleanDestination: false,
-            consolidate: false,
+            consolidate: true,
             takeScreenshotsOnlyOnFailures: true,
         }));
 
