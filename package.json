@@ -4,11 +4,11 @@
   "description": "CRUD tests for backbase assignment",
   "main": "index.js",
   "scripts": {
-    "lint": "eslint e2e/**/*.js && eslint visual/**/*.js",
-    "lint:fix": "eslint e2e/**/*.js --fix && eslint visual/**/*.js --fix",
-    "test:e2e": "rm -rf test-report && webdriver-manager update && protractor-flake --protractor-path=./node_modules/.bin/protractor --max-attempts=2 -- e2e/protractor.conf.js",
-    "test:visual": "cd visual && rm -rf backstop_data/bitmaps_test && backstop test",
-    "test:visual:approve": "cd visual && backstop approve"
+    "lint": "eslint test/e2e/*.js && eslint test/e2e/**/*.js && eslint test/e2e/**/**/*.js && eslint test/visual/**/*.js",
+    "lint:fix": "eslint test/e2e/*.js --fix && eslint test/e2e/**/*.js --fix && eslint test/e2e/**/**/*.js --fix && eslint test/visual/**/*.js --fix",
+    "test:e2e": "rm -rf test-report && webdriver-manager update && protractor-flake --protractor-path=./node_modules/.bin/protractor --max-attempts=2 -- test/e2e/protractor.conf.js",
+    "test:visual": "cd test/visual && rm -rf backstop_data/bitmaps_test && backstop test",
+    "test:visual:approve": "cd test/visual && backstop approve"
   },
   "author": "Walmyr Filho <wlsf82@gmail.com> (http://walmyr-filho.com)",
   "license": "ISC",

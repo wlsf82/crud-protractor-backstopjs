@@ -178,7 +178,7 @@ Note: all test scenarios are executed in different viewports (desktop and mobile
 
 Run `npm run test:visual` to run the visual regression tests
 
->To have a HTML report automatically opened after test execution, set `"report": ["browser"]` on `visual/backstop.json` file.
+>To have a HTML report automatically opened after test execution, set `"report": ["browser"]` on `test/visual/backstop.json` file.
 
 #### Approving new bitmap references due to expected visual changes or addition of new visual tests
 

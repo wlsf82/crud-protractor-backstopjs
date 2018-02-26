@@ -1,5 +1,5 @@
 .DS_Store
 node_modules
 test-report
-visual/backstop_data/bitmaps_test
-visual/backstop_data/html_report
+test/visual/backstop_data/bitmaps_test
+test/visual/backstop_data/html_report
