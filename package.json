@@ -6,7 +6,7 @@
   "scripts": {
     "lint": "eslint e2e/**/*.js && eslint visual/**/*.js",
     "lint:fix": "eslint e2e/**/*.js --fix && eslint visual/**/*.js --fix",
-    "test:e2e": "rm -rf test-report && webdriver-manager update && protractor-flake --protractor-path=./node_modules/.bin/protractor -- e2e/protractor.conf.js",
+    "test:e2e": "rm -rf test-report && webdriver-manager update && protractor-flake --protractor-path=./node_modules/.bin/protractor --max-attempts=2 -- e2e/protractor.conf.js",
     "test:visual": "cd visual && rm -rf backstop_data/bitmaps_test && backstop test",
     "test:visual:approve": "cd visual && backstop approve"
   },
